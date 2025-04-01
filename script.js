@@ -18,13 +18,6 @@ function volume_sphere() {
 
 	document.getElementById("volume").value = volume;
 } 
-
-window.onload = function(){
-	 document.getElementById('MyForm').onsubmit = function(e) {
-        e.preventDefault();
-        volume_sphere();
-    }
-}
 	   
 	
 	
