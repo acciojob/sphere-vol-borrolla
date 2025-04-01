@@ -23,7 +23,11 @@ function volume_sphere() {
 
 
 window.onload = function() {
-    document.getElementById('MyForm').onsubmit = volume_sphere;
+    document.getElementById('MyForm').onsubmit = function(e){
+		 e.preventDefault();
+    let radius = document.getElementById('radius').value;
+    alert('Radius: ' + radius);
+	}
 }
 
 	
