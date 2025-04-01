@@ -7,25 +7,24 @@ function volume_sphere() {
     let radius = parseFloat(radiusInput);
     if (isNaN(radius) || radius < 0) {
         // Display an error if the input is invalid
-        document.getElementById("output").innerText = "NAN.";
+        document.getElementById("output").innerText = "NAN";
         return;
     }
 
 	///calculate volume of sphere
 	let volume = (4 / 3) * Math.PI * Math.POW(radius, 3);
-
-	
     // Round the volume to four decimal places
     volume = volume.toFixed(4);
 
 	document.getElementById("volume").value = volume;
 } 
 
-window.onload = function()
-	{
-		document.getElementById('MyForm').onsubmit = function(e) {
-			e.preventDefault();
-			volume_sphere;
-	   }
-	}
+window.onload = function(){
+	 document.getElementById('MyForm').onsubmit = function(e) {
+        e.preventDefault();
+        volume_sphere();
+    }
+}
+	   
+	
 	
